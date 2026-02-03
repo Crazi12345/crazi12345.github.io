@@ -115,3 +115,176 @@ a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset; 
     transform: translateY(1px); 
 }
+
+/* Projects Grid & Cards */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.project-card {
+    background-color: #282828;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-decoration: none;
+}
+
+.project-image img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-info {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h3 {
+    margin: 0 0 10px 0;
+    color: #00bcd4;
+    font-size: 1.2em;
+}
+
+.project-info p {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-bottom: 15px;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85em;
+    color: #888;
+}
+
+.project-meta .language {
+    background-color: #333;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #eee;
+}
+
+.project-meta .stars {
+    display: flex;
+    align-items: center;
+}
+
+/* Project Table Styles */
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #282828;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.projects-table th, .projects-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+.projects-table th {
+    background-color: #333;
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+.projects-table tr:hover {
+    background-color: #2d2d2d;
+}
+
+.projects-table td a {
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+/* Search Input */
+#project-search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #282828;
+    color: #eee;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+#project-search:focus {
+    outline: none;
+    border-color: #00bcd4;
+}
+
+/* Redacted View */
+.redacted-mode .content, 
+.redacted-mode .sidebar {
+    position: relative;
+}
+
+.redacted-mode p, 
+.redacted-mode h1, 
+.redacted-mode h2, 
+.redacted-mode h3, 
+.redacted-mode td, 
+.redacted-mode th, 
+.redacted-mode span,
+.redacted-mode li,
+.redacted-mode a {
+    color: transparent !important;
+    background-color: black !important;
+    text-shadow: none !important;
+    border-radius: 3px;
+    user-select: none;
+}
+
+.redacted-mode img {
+    filter: brightness(0);
+}
+
+.redacted-mode .progress-bar {
+    background-color: black !important;
+}
+
+.redacted-control {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.redacted-checkbox {
+    cursor: pointer;
+}
+
+.redacted-text {
+    color: transparent !important;
+    background-color: black !important;
+    text-shadow: none !important;
+    border-radius: 3px;
+    user-select: none;
+}
